@@ -21,12 +21,12 @@ public class UserControllerIntegrationTest {
 
     @Test
     public void testGetUserById() throws Exception{
-        mockMvc.perform(get("/user/{id}", 13)
+        mockMvc.perform(get("/user/{id}", 1)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("name").value("Ashhar"))
-                .andExpect(jsonPath("id").value(13));
+                .andExpect(jsonPath("name").value("Peter"))
+                .andExpect(jsonPath("id").value(1));
 
     }
 
